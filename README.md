@@ -3,7 +3,6 @@
 ## Learning Goals
 
 - Use an external library to simplify tasks from ORM and Advanced ORM.
-- Manage database tables and schemas without ever writing SQL through Alembic.
 - Use SQLAlchemy to create, read, update and delete records in a SQL database.
 
 ***

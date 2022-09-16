@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 sqlalchemy = "*"
+ipdb = "*"
+pytest = "*"
 
 [dev-packages]
 sqlalchemy = "*"

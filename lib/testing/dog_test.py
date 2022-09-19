@@ -1,8 +1,16 @@
 from sqlalchemy.orm import sessionmaker
 
-from lib.dog import (create_table, find_by_id, find_by_name,
-    find_by_name_and_breed, save, new_from_db, get_all, update)
-from lib.models import Base, Dog
+from dog import (
+    create_table,
+    find_by_id,
+    find_by_name,
+    find_by_name_and_breed,
+    save,
+    new_from_db,
+    get_all,
+    update
+)
+from models import Base, Dog
 
 class TestDog:
     '''lib/dog.py'''

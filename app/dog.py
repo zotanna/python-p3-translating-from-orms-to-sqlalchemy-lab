@@ -23,5 +23,5 @@ def find_by_id(session, id):
 def find_by_name_and_breed(session, name, breed):
     pass
 
-def update(session, dog):
+def update_breed(session, dog, breed):
     pass

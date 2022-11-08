@@ -8,9 +8,17 @@ from dog import (
     save,
     new_from_db,
     get_all,
-    update
+    update_breed
 )
 from models import Base, Dog
+
+class TestModels:
+    '''app/models.py'''
+
+    def test_has_name_and_breed_attributes(self):
+        '''contains model "Dog" with name and breed attributes.'''
+        dog = Dog(name="joey", breed="cocker spaniel")
+        assert(dog.name == "joey" and dog.breed == "cocker spaniel")
 
 class TestDog:
     '''app/dog.py'''
@@ -68,9 +76,8 @@ class TestDog:
         assert(fanny.name == 'fanny' and fanny.breed == 'cockapoo')
     
     def test_updates_record(self):
-        '''contains function "update()" that takes a session and instance as arguments and updates the instance's corresponding database record to match its new attribute values.'''
+        '''contains function "update_breed()" that takes a session instance, and breed as arguments and updates the instance's breed.'''
         joey = TestDog.session.query(Dog).filter_by(name='joey').first()
-        joey.breed = 'bulldog'
-        update(TestDog.session, joey)
+        update_breed(TestDog.session, joey, 'bulldog')
         updated_record = TestDog.session.query(Dog).filter_by(name='joey').first()
         assert(updated_record.breed == 'bulldog')

@@ -32,13 +32,18 @@ class TestDog:
         engine = create_table(Base)
         Session = sessionmaker(engine)
         session = Session()
-        assert(session.query(Dog))
+        assert(engine != None)
 
     def test_saves_dog(self):
         '''contains function "save()" that takes a Dog instance and session as arguments, saves the dog to the database, and returns the session.'''
         joey = Dog(name="joey", breed="cocker spaniel")
-        session = save(TestDog.session, joey)
-        db_dog = session.query(Dog).first()
+        save(TestDog.session, joey)
+
+        engine = create_table(Base)
+        Session = sessionmaker(engine)
+        test_session = Session()
+
+        db_dog = test_session.query(Dog).first()
         assert(db_dog.name ==  'joey' and db_dog.breed == 'cocker spaniel')
 
     def test_creates_new_instance_from_db(self):

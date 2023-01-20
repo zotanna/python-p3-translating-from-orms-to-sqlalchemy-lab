@@ -31,7 +31,7 @@ messages to complete your work in the `lib/` folder.
 
 The testing file for this lab will execute many of the same tests as _"Putting
 it All Together: ORMs Lab"_ from the previous Canvas module. There are nine
-tests in total: one for your data model in `lib.models.py` and eight for your
+tests in total: one for your data model in `lib/models.py` and eight for your
 functions in `lib/dog.py`. In the previous lab, you had to write quite a bit of
 code to get those tests passing- using SQLAlchemy, it should be much easier.
 

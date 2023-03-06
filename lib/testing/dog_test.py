@@ -24,7 +24,6 @@ class TestModels:
 class TestDog:
     '''app/dog.py'''
 
-
     def test_creates_table(self):
         '''contains function "create_table()" that takes a declarative_base, creates table "dogs" if it does not exist, and returns the engine.'''
         engine = create_table(Base)

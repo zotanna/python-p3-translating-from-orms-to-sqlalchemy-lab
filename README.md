@@ -28,7 +28,7 @@ This is a **test-driven lab**. Run `pipenv install` to create your virtual
 environment and `pipenv shell` to enter the virtual environment, then `cd`
 into the `lib/` directory. Run
 `pytest -x` to run your tests. Use these instructions and `pytest`'s error
-messages to complete your work in the `lib/` directory.
+messages to complete your work in the `lib/` folder.
 
 The testing file for this lab will execute many of the same tests as _"Putting
 it All Together: ORMs Lab"_ from the previous Canvas module. There are nine

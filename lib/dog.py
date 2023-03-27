@@ -6,9 +6,6 @@ def create_table(base):
 def save(session, dog):
     pass
 
-def new_from_db(session):
-    pass
-
 def get_all(session):
     pass
 
